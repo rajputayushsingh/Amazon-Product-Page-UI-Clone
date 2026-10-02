@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Page Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            amazon<span>.in</span>
+        </div>
+
+        <div class="location">
+            📍
+            <div>
+                <small>Deliver to</small>
+                <strong>India</strong>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <select>
+                <option>All</option>
+                <option>Electronics</option>
+                <option>Mobiles</option>
+                <option>Computers</option>
+            </select>
+
+            <input type="text" placeholder="Search Amazon.in">
+
+            <button>🔍</button>
+        </div>
+
+        <div class="account">
+            <small>Hello, sign in</small>
+            <strong>Account & Lists ▾</strong>
+        </div>
+
+        <div class="orders">
+            <small>Returns</small>
+            <strong>& Orders</strong>
+        </div>
+
+        <div class="cart">
+            🛒 <span>Cart</span>
+        </div>
+
+    </header>
+
+
+    <!-- Secondary Navbar -->
+    <nav class="sub-nav">
+        <span>☰ All</span>
+        <span>Fresh</span>
+        <span>MX Player</span>
+        <span>Sell</span>
+        <span>Best Sellers</span>
+        <span>Today's Deals</span>
+        <span>Mobiles</span>
+        <span>Electronics</span>
+        <span>Prime</span>
+    </nav>
+
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        Electronics › Computers & Accessories › Accessories › Computer Accessories
+    </div>
+
+
+    <!-- Product Section -->
+    <main class="product-container">
+
+        <!-- Product Images -->
+        <section class="product-images">
+
+            <div class="thumbnail-container">
+
+                <img src="images/Headphone.jpg.jpeg"
+                     onclick="changeImage(this.src)"
+                     class="thumbnail active">
+
+                <img src="images/headphone2.jpg.jpeg"
+                     onclick="changeImage(this.src)"
+                     class="thumbnail">
+
+                <img src="images/headphones3.jpg.jpeg"
+                     onclick="changeImage(this.src)"
+                     class="thumbnail">
+
+                <img src="images/headphones4.jpg.jpeg"
+                     onclick="changeImage(this.src)"
+                     class="thumbnail">
+
+            </div>
+
+            <div class="main-image-container">
+                <img id="mainImage"
+                     src="images/product1.jpg"
+                     class="main-image">
+            </div>
+
+        </section>
+
+
+        <!-- Product Details -->
+        <section class="product-details">
+
+            <h1>
+                Wireless Bluetooth Headphones with Active Noise
+                Cancellation, 40 Hours Playtime
+            </h1>
+
+            <p class="brand">
+                Visit the Example Store
+            </p>
+
+            <div class="rating">
+                <span>4.3</span> ⭐⭐⭐⭐☆
+                <a href="#"> 12,458 ratings</a>
+            </div>
+
+            <p class="bought">
+                1K+ bought in past month
+            </p>
+
+            <hr>
+
+            <div class="price">
+                <span class="discount">-25%</span>
+                <span class="amount">₹2,999</span>
+            </div>
+
+            <p class="mrp">
+                M.R.P.: <del>₹3,999</del>
+            </p>
+
+            <p class="tax">
+                Inclusive of all taxes
+            </p>
+
+            <div class="offer-section">
+
+                <h3>Offers</h3>
+
+                <div class="offer-card">
+                    <strong>Bank Offer</strong>
+                    <p>
+                        Get ₹200 instant discount on selected bank cards.
+                    </p>
+                </div>
+
+                <div class="offer-card">
+                    <strong>No Cost EMI</strong>
+                    <p>
+                        Available on eligible credit cards.
+                    </p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="product-info">
+
+                <div>
+                    <strong>Brand</strong>
+                    <span>Example</span>
+                </div>
+
+                <div>
+                    <strong>Colour</strong>
+                    <span>Black</span>
+                </div>
+
+                <div>
+                    <strong>Connectivity</strong>
+                    <span>Bluetooth</span>
+                </div>
+
+                <div>
+                    <strong>Battery</strong>
+                    <span>40 Hours</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Buy Box -->
+        <aside class="buy-box">
+
+            <div class="buy-price">
+                ₹2,999
+            </div>
+
+            <p>
+                FREE delivery <strong>Tomorrow</strong>
+            </p>
+
+            <p class="delivery">
+                📍 Deliver to India
+            </p>
+
+            <h3 class="stock">
+                In Stock
+            </h3>
+
+            <label>Quantity:</label>
+
+            <select id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <button class="cart-btn" onclick="addToCart()">
+                Add to Cart
+            </button>
+
+            <button class="buy-btn" onclick="buyNow()">
+                Buy Now
+            </button>
+
+            <div class="secure">
+                🔒 Secure transaction
+            </div>
+
+            <div class="seller-info">
+                <p>Ships from <strong>Amazon</strong></p>
+                <p>Sold by <strong>Example Seller</strong></p>
+                <p>Payment <strong>Secure</strong></p>
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- About Product -->
+    <section class="about-product">
+
+        <h2>About this item</h2>
+
+        <ul>
+            <li>
+                Advanced wireless Bluetooth technology for stable connectivity.
+            </li>
+
+            <li>
+                Up to 40 hours of battery life on a single charge.
+            </li>
+
+            <li>
+                Comfortable design suitable for long listening sessions.
+            </li>
+
+            <li>
+                Active noise cancellation for an immersive audio experience.
+            </li>
+
+            <li>
+                Built-in microphone for calls and online meetings.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-top">
+            Back to top
+        </div>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Get to Know Us</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+            </div>
+
+            <div>
+                <h3>Connect with Us</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+            </div>
+
+            <div>
+                <h3>Make Money with Us</h3>
+                <p>Sell on Amazon</p>
+                <p>Become an Affiliate</p>
+                <p>Advertise Your Products</p>
+            </div>
+
+            <div>
+                <h3>Let Us Help You</h3>
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Help</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Amazon Product Page UI Clone | Created for Learning
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
